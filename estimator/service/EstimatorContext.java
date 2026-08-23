@@ -3,11 +3,11 @@ package workshop.estimator.service;
 import workshop.estimator.strategy.*;
 
 public class EstimatorContext {
-    private LaborPricingStrategy laborStrategy;
-    private PartsMarkupStrategy partsStrategy;
-    private DiscountStrategy discountStrategy;
+    private final LaborPricingStrategy laborStrategy;
+    private final PartsMarkupStrategy partsStrategy;
+    private final DiscountStrategy discountStrategy;
 
-    // Pass strategies in through the constructor
+
     public EstimatorContext(LaborPricingStrategy laborStrategy,
                             PartsMarkupStrategy partsStrategy,
                             DiscountStrategy discountStrategy) {

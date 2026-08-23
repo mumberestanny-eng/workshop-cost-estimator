@@ -14,7 +14,7 @@ public class CustomLaborStrategy implements LaborPricingStrategy {
             double standardCost = standardHours * hourlyRate;
             double overtimeCost = overtimeHours * hourlyRate;
 
-            return overtimeCost * standardCost;
+            return overtimeCost + standardCost;
         }
         return hours * hourlyRate;
     }

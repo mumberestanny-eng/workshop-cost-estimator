@@ -91,10 +91,9 @@ public class ServiceOrder {
                 throw new IllegalStateException("A pricing strategy context must be set.");
             }
             if (partsCost < 0) {
-                this.partsCost = 0.0;
+                throw new IllegalStateException("Parts cost must be non-negative.");
             }
-
             return new ServiceOrder(this);
+            }
         }
     }
-}
